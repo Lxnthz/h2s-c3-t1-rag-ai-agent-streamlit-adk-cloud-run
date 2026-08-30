@@ -64,7 +64,7 @@ gcloud run deploy coffee-barista \
   --source ./src \
   --region "$REGION" \
   --allow-unauthenticated \
-  --labels streamlit-adk-rag \
+  --labels app=streamlit-adk-rag \
   --command "/cnb/lifecycle/launcher" \
   --args "sh,-c,python3 -m streamlit run app.py --server.port=\$PORT --server.address=0.0.0.0 --server.enableCORS=false --server.enableXsrfProtection=false" \
   --service-account "barista-agent-sa@${PROJECT_ID}.iam.gserviceaccount.com" \

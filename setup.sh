@@ -52,7 +52,7 @@ pip3 install -r src/requirements.txt
 echo "[INFO] Starting Service Account creation..."
 gcloud iam service-accounts create barista-agent-sa \
   --description="Service account for Coffee Barista SDK agent on Cloud Run" \
-  --display-name="Barista Agent Service Account"
+  --display-name="Barista Agent Service Account" || true
 
 echo "[INFO] Granting Gemini Enterprise Agent Platform user role (roles/aiplatform.user) to the newly created Service Account"
 gcloud projects add-iam-policy-binding $PROJECT_ID \

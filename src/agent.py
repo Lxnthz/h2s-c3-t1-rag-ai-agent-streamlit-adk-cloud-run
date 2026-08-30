@@ -25,7 +25,7 @@ def get_menu() -> str:
 barista_agent = LlmAgent(
   name="barista_agent",
   model="gemini-2.5-flash",
-  instructions="""
+  instruction="""
 Your job is to recommend drinks and pastries to customers based on their preferences.
 
 Rules you MUST follow:
